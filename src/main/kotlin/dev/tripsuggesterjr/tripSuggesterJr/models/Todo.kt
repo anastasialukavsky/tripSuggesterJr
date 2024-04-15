@@ -11,7 +11,7 @@ import java.util.*
 
 
 @Entity
-//@Table(name ="todo")
+
 class Todo {
 
     @Id
