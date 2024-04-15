@@ -38,6 +38,7 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework:spring-webflux")
 	testImplementation("org.springframework.graphql:spring-graphql-test")
+	implementation("org.springframework.boot:spring-boot-starter-validation")
 //	testImplementation("org.springframework.security:spring-security-test")
 }
 
