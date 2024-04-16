@@ -4,6 +4,7 @@ import dev.tripsuggesterjr.tripSuggesterJr.models.Todo
 import dev.tripsuggesterjr.tripSuggesterJr.services.TodoService
 import jakarta.validation.Valid
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 
@@ -35,7 +36,7 @@ class TodoController {
 
 
     @DeleteMapping("/todo/{id}")
-    fun deleteTodoById(@PathVariable("id") todoId: Long): String {
+    fun deleteTodoById(@PathVariable("id") todoId: Long): ResponseEntity<Map<String, String>> {
         return todoService.deleteTodoById(todoId)
 
     }
