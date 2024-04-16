@@ -1,8 +1,6 @@
 package dev.tripsuggesterjr.tripSuggesterJr.models.rate
 
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.Id
+import jakarta.persistence.*
 import java.time.Month
 import java.util.*
 
@@ -15,6 +13,7 @@ data class Rate(
 
     var rate: Double = 0.0,
 
+    @Enumerated(EnumType.STRING)
     var month: Month,
 
     var defaultValue: Double = 234.00
