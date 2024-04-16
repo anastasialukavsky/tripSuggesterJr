@@ -35,6 +35,9 @@ dependencies {
 	//TODO configure redis
 //	implementation("org.springframework.ai:spring-ai-redis-spring-boot-starter")
 	runtimeOnly("org.postgresql:postgresql")
+	implementation("org.liquibase:liquibase-core")
+	implementation("org.postgresql:postgresql")
+	implementation("org.springframework.boot:spring-boot-starter-jdbc")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework:spring-webflux")
 	testImplementation("org.springframework.graphql:spring-graphql-test")
