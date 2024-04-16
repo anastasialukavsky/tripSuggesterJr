@@ -8,13 +8,13 @@ class ErrorResponse {
     var timestamp: Date? = null
     var code = 0
     var status: String = ""
-    var message: String = ""
+    var message: String? = ""
 
     constructor() {
         timestamp = Date()
     }
 
-    constructor(httpStatus: HttpStatus, message: String) {
+    constructor(httpStatus: HttpStatus, message: String?) {
         timestamp = Date()
         code = httpStatus.value()
         status = httpStatus.name
