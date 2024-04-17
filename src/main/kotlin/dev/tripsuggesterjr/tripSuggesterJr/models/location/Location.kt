@@ -15,5 +15,4 @@ data class Location(
 
     var longitude: Double = 0.0
 
-
 )
