@@ -72,16 +72,16 @@ class HotelService {
             val createdHotel = hotelRepo.save(hotel)
 
             val newRate = Rate(
-                rate = 0.0, // Set initial rate value
-                month = Month.APRIL, // Set initial month value
-                defaultValue = 0.0, // Set initial default value
-                hotel = createdHotel // Associate the Rate with the saved Hotel
+                rate = 0.0,
+                month = Month.APRIL,
+                defaultValue = 0.0,
+                hotel = createdHotel
             )
-            rateRepo.save(newRate) // Save the rate
+            rateRepo.save(newRate)
 
             return createdHotel
         } catch (ex: Exception) {
-            // Log or handle the exception appropriately
+
             throw ex
         }
     }
