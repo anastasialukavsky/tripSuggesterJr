@@ -1,7 +1,5 @@
 package dev.tripsuggesterjr.tripSuggesterJr.models.hotel
 
-import dev.tripsuggesterjr.tripSuggesterJr.models.amenity.Amenity
-import dev.tripsuggesterjr.tripSuggesterJr.models.location.Location
 import dev.tripsuggesterjr.tripSuggesterJr.models.rate.Rate
 import jakarta.persistence.*
 import java.util.*
@@ -14,18 +12,20 @@ data class Hotel(
 
     var name: String = "",
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "location_id")
-    var location: Location,
+//    @OneToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "location_id")
+//    var location: Location,
+
 
     @OneToMany(mappedBy = "hotel", fetch = FetchType.LAZY)
-    @JoinColumn(name = "rate_id")
-    var rate: Set<Rate> = HashSet(),
+//    @JoinColumn(name = "rate_id")
+    var rates: Set<Rate>? = HashSet(),
 
     var phoneNumber: String = "",
 
-    @OneToMany(mappedBy = "hotel", fetch = FetchType.LAZY)
-    @JoinColumn(name = "amenity_id")
-    var amenities: Set<Amenity> = HashSet()
+//    @JoinColumn(name = "amenity_id")
+
+//    @OneToMany(mappedBy = "hotel", fetch = FetchType.LAZY)
+//    var amenities: Set<Amenity> = HashSet()
 
 )
