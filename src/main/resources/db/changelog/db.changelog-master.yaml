@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - property:
+      name: spring.application.name
+      value: tripSuggesterJr
+  - property:
+      name: server.port
+      value: '8008'
+  - property:
+      name: spring.datasource.url
+      value: jdbc:postgresql://localhost:5432/tripjr_db
+  - property:
+      name: spring.datasource.username
+      value: postgres
+  - property:
+      name: spring.datasource.password
+      value: Trip1234
+  - property:
+      name: spring.datasource.driver-class-name
+      value: org.postgresql.Driver
+  - property:
+      name: spring.jpa.properties.hibernate.dialect
+      value: org.hibernate.dialect.PostgreSQLDialect
+  - property:
+      name: spring.jpa.hibernate.ddl-auto
+      value: update
+  - property:
+      name: spring.data.redis.host
+      value: localhost
+  - property:
+      name: spring.data.redis.port
+      value: '6379'
+
+  # Import individual changelog files without circular references
+  - include:
+      file: classpath:/db/changelog/changelog1.yaml
