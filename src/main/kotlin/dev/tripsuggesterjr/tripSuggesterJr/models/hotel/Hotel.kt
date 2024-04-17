@@ -17,8 +17,8 @@ data class Hotel(
 //    var location: Location,
 
 
-    @OneToMany(mappedBy = "hotel", fetch = FetchType.LAZY)
 //    @JoinColumn(name = "rate_id")
+    @OneToMany(mappedBy = "hotel", fetch = FetchType.LAZY)
     var rates: Set<Rate>? = HashSet(),
 
     var phoneNumber: String = "",
